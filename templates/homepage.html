@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page - Inventure</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"
+</head>
+
+<body>
+    <header class="cabecalho">
+
+  <img class="cabecalho-imagem" src="{{ url_for('static', filename='qrcode_inventure.png')}}" >
+        <nav class=cabecalho-menu">
+
+            <a class="cabecalho-menu-item" href="https://qrseg.herokuapp.com/inventure"  > &nbsp inVenture &nbsp &nbsp  </a>
+
+              <a class="cabecalho-menu-item" href="https://qrseg.herokuapp.com/servicos"  > &nbsp Serviços &nbsp &nbsp </a>
+              <a class="cabecalho-menu-item" href="https://qrseg.herokuapp.com/ventures" > &nbsp Ventures &nbsp &nbsp </a>
+            <a class="cabecalho-menu-item" href="https://qrseg.herokuapp.com/contatos"  > &nbsp Contatos &nbsp  </a>
+
+        </nav>
+
+    </header>
+
+        <main classe="conteudo">
+
+<section class="conteudo-principal">
+    <div class="conteudo-principal-escrito">
+        <h1 class="conteudo-principal-escrito-titulo">inVenture</h1>
+        <h2 class="conteudo-principal-escrito-subtitulo"> Participações em Negócios Inovadores</h2>
+        <a  href="https://qrseg.herokuapp.com/contatos">
+        <button class="conteudo-principal-escrito-botao" >Entre em Contato!</button></a>
+    </div>
+
+    <img class="conteudo-principal-imagem" src="{{ url_for('static', filename='inventurelogo.jpg')}}" >
+
+</section>
+
+            <section class="conteudo-secundario">
+                <h3 class="conteudo-secundario-titulo">O que ela faz por você</h3>
+                <p class="conteudo-secundario-paragrafo">Consultoria de Inovação</p>
+                <p class="conteudo-secundario-paragrafo">Captação de Investimentos</p>
+                <p class="conteudo-secundario-paragrafo">Desenvolvimento de Produtos e Tecnologias</p>
+                <p class="conteudo-secundario-paragrafo">Fundos de Investimentos e Seguros</p>
+            </section>
+
+        </main>
+
+        <footer class="rodape">
+<img class="rodape-imagem" src="{{ url_for('static', filename='inventurelogo.jpg')}}" >
+     <p class="rodape-texto">inVenture 2022</p>
+
+        </footer>
+
+
+</body>
+</html>
