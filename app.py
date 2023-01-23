@@ -20,8 +20,13 @@ def inventure():
   return render_template('inventure.html')
 
 @app.route('/ventures')
-def venture():
+def ventures():
   return render_template('ventures.html')
+
+@app.route('/contatos')
+def contatos():
+  return render_template('contatos.html')
+
 
 if __name__ == "__main__":
  app.run()
