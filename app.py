@@ -26,13 +26,5 @@ def ventures():
 def contatos():
   return render_template('contatos.html')
 
-@app.route('/contato')
-def contato():
-  return render_template('contato.html')
-
-@app.rout('/home')
-def home():
-  return render_template('home.html')
-
 if __name__ == "__main__":
  app.run(debug=True)
