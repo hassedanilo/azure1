@@ -2,6 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+lista_usuarios = ['Lira', 'Danilo', 'Alon', 'Fernanda']
+
 @app.route('/')
 def index():
   return render_template('index.html')
