@@ -2,6 +2,9 @@
 {% block body %}
 <div class="container">
 <h1> Usuários</h1>
-{{ lista_usuarios }}		
+{{ lista_usuarios }}
+{% for usuario in lista_usuarios %}
+{{ usuario }}
+{% endfor %}
 </div>
 {% endblock %}
