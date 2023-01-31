@@ -36,7 +36,7 @@ def contato():
 
 @app.route('/usuarios')
 def usuarios():
-  return render_template('usuarios.html')
+  return render_template('usuarios.html', lista_usuarios=lista_usuarios)
 
 if __name__ == "__main__":
  app.run(debug=True)
