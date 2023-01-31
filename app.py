@@ -34,5 +34,9 @@ def home():
 def contato():
   return render_template('contato.html')
 
+@app.route('/usuarios')
+def usuarios():
+  return render_template('usuarios.html')
+
 if __name__ == "__main__":
  app.run(debug=True)
