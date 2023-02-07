@@ -1,5 +1,10 @@
 from flask import Flask, render_template
 
+import os
+import folium
+import pandas as pd
+
+
 app = Flask(__name__)
 
 lista_usuarios = ['Lira', 'Danilo', 'Alon', 'Fernanda']
@@ -39,6 +44,22 @@ def contato():
 @app.route('/usuarios')
 def usuarios():
   return render_template('usuarios.html', lista_usuarios=lista_usuarios)
+
+m = folium.Map(location=[-27.695489, -48.465843], zoom_start=15)
+
+m.save('my_map.html')
+m.save('templates/my_map.html')
+
+@app.route('/mapa')
+def mapa():
+    start_coords = (-27.695489, -48.465843)
+    folium_map = folium.Map(location=start_coords, zoom_start=14)
+    return folium_map._repr_html_()
+
+@app.route('/mapa-arq')
+def mapa_arq():
+    return render_template('my_map.html')
+
 
 if __name__ == "__main__":
  app.run(debug=True)
