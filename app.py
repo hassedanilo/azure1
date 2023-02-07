@@ -52,6 +52,10 @@ def mapa():
     folium_map = folium.Map(location=start_coords, zoom_start=14)
     return folium_map._repr_html_()
 
+@app.route('/mapa-arq')
+def mapa_arq():
+    return render_template('my_map1.html')
+  
 @app.route('/mapa-arq2')
 def mapa_arq():
     return render_template('my_map2.html')
