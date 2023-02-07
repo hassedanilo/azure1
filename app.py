@@ -57,7 +57,7 @@ def mapa_arq():
     return render_template('my_map1.html')
   
 @app.route('/mapa-arq2')
-def mapa_arq():
+def mapa_arq2():
     return render_template('my_map2.html')
 
 
