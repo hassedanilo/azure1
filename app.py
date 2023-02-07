@@ -45,11 +45,6 @@ def contato():
 def usuarios():
   return render_template('usuarios.html', lista_usuarios=lista_usuarios)
 
-m = folium.Map(location=[-27.695489, -48.465843], zoom_start=15)
-
-m.save('my_map.html')
-m.save('templates/my_map.html')
-
 @app.route('/mapa')
 def mapa():
     start_coords = (-27.695489, -48.465843)
