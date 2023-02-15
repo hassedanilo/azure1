@@ -2,6 +2,10 @@ from flask import Flask, render_template
 
 import folium
 
+from folium.plugins import HeatMap
+
+import pandas as pd
+
 app = Flask(__name__)
 
 lista_usuarios = ['Lira', 'Danilo', 'Alon', 'Fernanda']
