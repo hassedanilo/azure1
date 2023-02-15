@@ -47,9 +47,31 @@ m = folium.Map(location=[-27.695489, -48.465843], zoom_start=15)
 m.save('templates/my_map2.html')
 
 @app.route('/mapa')
-def mapa():
-    start_coords = (-27.695489, -48.465843)
-    folium_map = folium.Map(location=start_coords, zoom_start=14)
+def mapa(): 
+    
+    edunatal = pd.read_csv('edunatal1.csv')
+    edunatal.head()
+    edunatal = edunatal.drop(columns=['Unnamed: 0', 'Type'])
+    edunatal.rename(columns={'NAME':'Name', 'GEOCODE_INPUT':'Geocode_Input', 'LAT':'Lat', 'LNG':'Lng'}, inplace=True)
+    edunatal.head()
+
+    pattern = r"[Cc][Mm][Ee][Ii]"
+    edunatal = edunatal[edunatal['Name'].str.contains(pattern)]
+    edunatal.dropna(inplace=True)
+   
+    edunatal.head()
+
+    lat = edunatal.Lat.tolist()
+    lng = edunatal.Lng.tolist()
+    folium_map = folium.Map(
+    location=[-27.5971027, -48.5580055],
+    tiles='cartodbdark_matter',
+    zoom_start=5
+)
+   
+    HeatMap(list(zip(lat, lng))).add_to(folium_map)
+
+    
     return folium_map._repr_html_()
 
 @app.route('/mapa-arq')
