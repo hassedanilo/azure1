@@ -74,8 +74,8 @@ def mapa():
 )
    
     HeatMap(list(zip(lat, lng))).add_to(folium_map)
-    tooltip = "Click Para Mais Informação"
 
+    tooltip = "Click Para Mais Informação"
     marker = folium.Marker(
     location=[-27.695489, -48.465843],
     icon=folium.Icon(icon="cloud"),
